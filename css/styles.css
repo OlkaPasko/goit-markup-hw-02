@@ -39,7 +39,8 @@ body {
 }
 
 .nav .link:hover,
-.nav .link:focus {
+.nav .link:focus,
+.nav .link.current {
   color: var(--accent-color);
 }
 
@@ -93,6 +94,10 @@ body {
 
 .occupation {
   color: var(--contacts-color);
+}
+
+.network-icon:hover {
+  background-color: var(--accent-color);
 }
 
 /* Футер */
