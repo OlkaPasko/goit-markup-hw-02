@@ -5,7 +5,7 @@
   --btn-text-color: #ffffff;
 
   --hero-bg: rgba(47, 48, 58, 0.8);
-  /* --feature-bg: #f5f4fa; */
+  /* --feature-item-bg: #f5f4fa; */
   --caption-bg: rgba(47, 48, 58, 0.8);
   --our-team-bg: #f5f4fa;
 
@@ -15,10 +15,21 @@
   /* Portfolio page*/
   --btn-bg: #f5f4fa;
   --item-desc-bg: rgba(33, 150, 243, 0.9);
+
+  /* fonts */
+  --font-logo: 'Raleway', sans-serif;
+  --font-main: -apple-system, BlinkMacSystemFont, avenir next, avenir,
+    helvetica neue, helvetica, Ubuntu, roboto, noto, segoe ui, arial, sans-serif;
 }
 
 body {
   background-color: #ffffff;
+
+  font-family: var(--font-main);
+}
+
+address {
+  font-style: normal;
 }
 
 .list {
@@ -26,6 +37,14 @@ body {
 }
 
 /* ANCHOR Шапка сайта */
+.logo {
+  font-family: var(--font-logo);
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+}
+
 .logo .begin {
   color: var(--accent-color);
 }
@@ -37,13 +56,21 @@ body {
   color: #ffffff;
 }
 
-.link {
+.link,
+.contacts {
   color: var(--primary-text-color);
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
 }
 
 .nav .link:hover,
 .nav .link:focus,
-.nav .link.current {
+.nav .link.current,
+.contacts:hover,
+.contacts:focus {
   color: var(--accent-color);
 }
 
@@ -51,29 +78,51 @@ body {
   color: var(--contacts-color);
 }
 
-.contacts:hover,
-.contacts:focus {
-  color: var(--accent-color);
-}
-
 /* ANCHOR Герой */
 .hero-title {
   color: #ffffff;
   background-color: var(--hero-bg);
+
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
 .btn {
   color: var(--btn-text-color);
   background-color: var(--accent-color);
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+
+  /* FIXME */
+  /* display: flex; */
+  /* align-items: center;
+  text-align: center; */
+  letter-spacing: 0.06em;
 }
 
 /* ANCHOR Особенности */
-.title {
+.feature .title {
   color: var(--primary-text-color);
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 }
 
 .feature .desc {
   color: var(--contacts-color);
+
+  font-size: 14px;
+  line-height: 1.71x;
+  letter-spacing: 0.03em;
 }
 
 /* ANCHOR Чем мы занимаемся */
@@ -82,7 +131,26 @@ body {
   background-color: var(--caption-bg);
 }
 
-/* ANCHOR Наша команда */
+.what-we-do > .title,
+.our-team > .title,
+.customers > .title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.caption {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+/* ANCHOR Наша команда */ /* и часть Портфолио Все */
 .our-team {
   background-color: var(--our-team-bg);
 }
@@ -92,9 +160,36 @@ body {
   color: var(--primary-text-color);
 }
 
+.name {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.list-all .project-name {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+
 .occupation,
 .list-all .project-type {
   color: var(--contacts-color);
+
+  font-size: 16px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+}
+
+.occupation {
+  text-align: center;
+}
+
+.list-all .project-type {
+  line-height: 1.88;
 }
 
 .network-icon:hover {
@@ -117,9 +212,30 @@ footer .phone {
   color: var(--footer-contacts-color);
 }
 
+footer .address,
+footer .e-mail,
+footer .phone {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+
+.connect,
+.describe {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
 /* ANCHOR Portfolio page */
 .portfolio .link {
   background-color: var(--btn-bg);
+}
+
+.portfolio input {
+  visibility: hidden;
 }
 
 .portfolio .link:hover,
