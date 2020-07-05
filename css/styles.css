@@ -230,17 +230,13 @@ footer .phone {
 }
 
 /* ANCHOR Portfolio page */
-.portfolio .link {
+.filter-btn {
   background-color: var(--btn-bg);
 }
 
-.portfolio input {
-  visibility: hidden;
-}
-
-.portfolio .link:hover,
-.portfolio .link:focus,
-.portfolio .link.current {
+.filter-nav .filter-btn:hover,
+.filter-nav .filter-btn:active,
+.filter-btn.current {
   color: var(--btn-text-color);
   background-color: var(--accent-color);
 }
